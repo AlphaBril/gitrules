@@ -1,0 +1,425 @@
+{
+  "$schema": "https://bendera.github.io/vscode-commit-message-editor/schemas/config-v1.schema.json",
+  "configVersion": "1",
+  "staticTemplate": [
+    "feat: Short description",
+    "",
+    "Message body",
+    "",
+    "Message footer"
+  ],
+  "dynamicTemplate": [
+    "{type} {scope}: {description}",
+    "",
+    "{body}",
+    "",
+    "{footer}"
+  ],
+  "tokens": [
+    {
+      "label": "Type",
+      "name": "type",
+      "type": "enum",
+      "description": "Type of changes",
+      "options": [
+        {
+          "label": "format",
+          "value": ":art:",
+          "description": "Improve structure/format of the code"
+        },
+        {
+          "label": "performance",
+          "value": ":zap:",
+          "description": "Improve performance"
+        },
+        {
+          "label": "del",
+          "value": ":fire:",
+          "description": "Remove code or files"
+        },
+        {
+          "label": "bugfix",
+          "value": ":bug:",
+          "description": "Fix a bug"
+        },
+        {
+          "label": "hotfix",
+          "value": ":ambulance:",
+          "description": "Critical hotfix"
+        },
+        {
+          "label": "feat",
+          "value": ":sparkles:",
+          "description": "Introduce new features"
+        },
+        {
+          "label": "doc",
+          "value": ":memo:",
+          "description": "Add or update documentation"
+        },
+        {
+          "label": "deploy",
+          "value": ":rocket:",
+          "description": "Deploy stuff"
+        },
+        {
+          "label": "UI",
+          "value": ":lipstick:",
+          "description": "Add or update the UI and style files"
+        },
+        {
+          "label": "new project",
+          "value": ":tada:",
+          "description": "Begin a project"
+        },
+        {
+          "label": "tests",
+          "value": ":white_check_mark:",
+          "description": "Add, update, or pass tests"
+        },
+        {
+          "label": "security",
+          "value": ":lock:",
+          "description": "Fix security issues"
+        },
+        {
+          "label": "secrets",
+          "value": ":closed_lock_with_key:",
+          "description": "Add or update secrets"
+        },
+        {
+          "label": "tags",
+          "value": ":bookmark:",
+          "description": "Release/Version tags"
+        },
+        {
+          "label": "lint",
+          "value": ":rotating_light:",
+          "description": "Fix compiler/linter warnings"
+        },
+        {
+          "label": "WIP",
+          "value": ":construction:",
+          "description": "Work in progress"
+        },
+        {
+          "label": "build",
+          "value": ":green_heart:",
+          "description": "Fix CI Build"
+        },
+        {
+          "label": "down dep",
+          "value": ":arrow_down:",
+          "description": "Downgrade dependencies"
+        },
+        {
+          "label": "up dep",
+          "value": ":arrow_up:",
+          "description": "Upgrade dependencies"
+        },
+        {
+          "label": "pin",
+          "value": ":pushpin:",
+          "description": "Pin dependencies to specific versions"
+        },
+        {
+          "label": "up CI",
+          "value": ":construction_worker:",
+          "description": "Add or update CI build system"
+        },
+        {
+          "label": "analytics",
+          "value": ":chart_with_upwards_trend:",
+          "description": "Add or update analytics or track code"
+        },
+        {
+          "label": "refacto",
+          "value": ":recycle:",
+          "description": "Refactor code"
+        },
+        {
+          "label": "add dep",
+          "value": ":heavy_plus_sign:",
+          "description": "Add a dependency"
+        },
+        {
+          "label": "rm dep",
+          "value": ":heavy_minus_sign:",
+          "description": "Remove a dependency"
+        },
+        {
+          "label": "cfg",
+          "value": ":wrench:",
+          "description": "Add or update configuration files"
+        },
+        {
+          "label": "scripts",
+          "value": ":hammer:",
+          "description": "Add or update development scripts"
+        },
+        {
+          "label": "MrWorldwide",
+          "value": ":globe_with_meridians:",
+          "description": "Internationalization and localization"
+        },
+        {
+          "label": "typos",
+          "value": ":pencil2:",
+          "description": "Fix typos"
+        },
+        {
+          "label": "piggy",
+          "value": ":poop:",
+          "description": "Write bad code that needs to be improved"
+        },
+        {
+          "label": "revert",
+          "value": ":rewind:",
+          "description": "Revert changes"
+        },
+        {
+          "label": "merge",
+          "value": ":twisted_rightwards_arrows:",
+          "description": "Merge branches"
+        },
+        {
+          "label": "package",
+          "value": ":package:",
+          "description": "Add or update compiled files or packages"
+        },
+        {
+          "label": "api",
+          "value": ":alien:",
+          "description": "Update code due to external API changes"
+        },
+        {
+          "label": "rm resources",
+          "value": ":truck:",
+          "description": "Move or rename resources (e.g.: files, paths, routes)"
+        },
+        {
+          "label": "license",
+          "value": ":page_facing_up:",
+          "description": "Add or update license"
+        },
+        {
+          "label": "breaking",
+          "value": ":boom:",
+          "description": "Introduce breaking changes"
+        },
+        {
+          "label": "assets",
+          "value": ":bento:",
+          "description": "Add or update assets"
+        },
+        {
+          "label": "accessibility",
+          "value": ":wheelchair:",
+          "description": "Improve accessibility"
+        },
+        {
+          "label": "comments",
+          "value": ":bulb:",
+          "description": "Add or update comments in source code"
+        },
+        {
+          "label": "drunk",
+          "value": ":beers:",
+          "description": "Write code drunkenly"
+        },
+        {
+          "label": "texts",
+          "value": ":speech_balloon:",
+          "description": "Add or update text and literals"
+        },
+        {
+          "label": "database",
+          "value": ":card_file_box:",
+          "description": "Perform database related changes"
+        },
+        {
+          "label": "logs",
+          "value": ":loud_sound:",
+          "description": "Add or update logs"
+        },
+        {
+          "label": "rm logs",
+          "value": ":mute:",
+          "description": "Remove logs"
+        },
+        {
+          "label": "contributors",
+          "value": ":busts_in_silhouette:",
+          "description": "Add or update contributor(s)"
+        },
+        {
+          "label": "UX",
+          "value": ":children_crossing:",
+          "description": "Improve user experience/usability"
+        },
+        {
+          "label": "archi",
+          "value": ":building_construction:",
+          "description": "Make architectural changes"
+        },
+        {
+          "label": "responsive",
+          "value": ":iphone:",
+          "description": "Work on responsive design"
+        },
+        {
+          "label": "mock",
+          "value": ":clown_face:",
+          "description": "Mock things"
+        },
+        {
+          "label": "easter egg",
+          "value": ":egg:",
+          "description": "Add or update an easter egg"
+        },
+        {
+          "label": "gitignore",
+          "value": ":see_no_evil:",
+          "description": "Add or update a .gitignore file"
+        },
+        {
+          "label": "snapshots",
+          "value": ":camera_flash:",
+          "description": "Add or update snapshots"
+        },
+        {
+          "label": "exp",
+          "value": ":alembic:",
+          "description": "Perform experiments"
+        },
+        {
+          "label": "SEO",
+          "value": ":mag:",
+          "description": "Improve SEO"
+        },
+        {
+          "label": "types",
+          "value": ":label:",
+          "description": "Add or update types"
+        },
+        {
+          "label": "seed",
+          "value": ":seedling:",
+          "description": "Add or update seed files"
+        },
+        {
+          "label": "flags",
+          "value": ":triangular_flag_on_post:",
+          "description": "Add, update, or remove feature flags"
+        },
+        {
+          "label": "errors",
+          "value": ":goal_net:",
+          "description": "Catch errors"
+        },
+        {
+          "label": "anim",
+          "value": ":dizzy:",
+          "description": "Add or update animations and transitions"
+        },
+        {
+          "label": "deprecated",
+          "value": ":wastebasket:",
+          "description": "Deprecate code that needs to be cleaned up"
+        },
+        {
+          "label": "auth",
+          "value": ":passport_control:",
+          "description": "Work on code related to authorization, roles and permissions"
+        },
+        {
+          "label": "smallfix",
+          "value": ":adhesive_bandage:",
+          "description": "Simple fix for a non-critical issue"
+        },
+        {
+          "label": "data exp",
+          "value": ":monocle_face:",
+          "description": "Data exploration/inspection"
+        },
+        {
+          "label": "dead",
+          "value": ":coffin:",
+          "description": "Remove dead code"
+        },
+        {
+          "label": "failtest",
+          "value": ":test_tube:",
+          "description": "Add a failing test"
+        },
+        {
+          "label": "business",
+          "value": ":necktie:",
+          "description": "Add or update business logic"
+        },
+        {
+          "label": "healthcheck",
+          "value": ":stethoscope:",
+          "description": "Add or update healthcheck"
+        },
+        {
+          "label": "infra",
+          "value": ":bricks:",
+          "description": "Infrastructure related changes"
+        },
+        {
+          "label": "dev exp",
+          "value": ":technologist:",
+          "description": "Improve developer experience"
+        },
+        {
+          "label": "money",
+          "value": ":money_with_wings:",
+          "description": "Add sponsorships or money related infrastructure"
+        },
+        {
+          "label": "thread",
+          "value": ":thread:",
+          "description": "Add or update code related to multithreading or concurrency"
+        },
+        {
+          "label": "valid",
+          "value": ":safety_vest:",
+          "description": "Add or update code related to validation"
+        }
+      ]
+    },
+    {
+      "label": "Scope",
+      "name": "scope",
+      "description": "A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., \"feat(parser): add ability to parse arrays\".",
+      "type": "text",
+      "multiline": false,
+      "prefix": "(",
+      "suffix": ")"
+    },
+    {
+      "label": "Short description",
+      "name": "description",
+      "description": "Short description in the subject line.",
+      "type": "text",
+      "multiline": false
+    },
+    {
+      "label": "Body",
+      "name": "body",
+      "description": "Optional body",
+      "type": "text",
+      "multiline": true,
+      "lines": 5,
+      "maxLines": 10
+    },
+    {
+      "label": "Footer",
+      "name": "footer",
+      "description": "Optional footer",
+      "type": "text",
+      "multiline": true
+    }
+  ]
+}
